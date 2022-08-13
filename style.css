@@ -1,0 +1,154 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+button {
+  font: inherit;
+}
+/* --------------- */
+/* variable  */
+/* --------------- */
+:root {
+  /* colors  */
+  --dark-cyan: hsl(158, 36%, 37%);
+  --cream: hsl(30, 38%, 92%);
+  --very-dark-blue: hsl(212, 21%, 14%);
+  --dark-grayish-blue: hsl(228, 12%, 48%);
+  --white: hsl(0, 0%, 100%);
+}
+
+/* ---------------- */
+/* utility classes  */
+/* ---------------- */
+.text-cyan {
+  color: var(--dark-cyan);
+}
+.text-grayish-blue {
+  color: var(--dark-grayish-blue);
+}
+.text-dark-blue {
+  color: var(--very-dark-blue);
+}
+.bg-cyan {
+  background-color: var(--dark-cyan);
+}
+.bg-cream {
+  background-color: var(--cream);
+}
+.bg-white {
+  background-color: var(--white);
+}
+.grid {
+  display: grid;
+}
+.ff-montserrat {
+  font-family: "Montserrat", sans-serif;
+}
+.ff-fraunces {
+  font-family: "Fraunces", serif;
+}
+.fs-l {
+  font-weight: 900;
+  font-size: 2.5rem;
+}
+.fs-sm {
+  font-weight: 500;
+  font-size: 1rem;
+}
+.letter-spacing-1 {
+  letter-spacing: 0.3rem;
+}
+.uppercase {
+  text-transform: uppercase;
+}
+.line-height {
+  line-height: 0.8;
+}
+
+/* -------------- */
+/* custom css  */
+/* -------------- */
+html {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin: 1.5rem 2rem;
+}
+.desktop-image {
+  display: none;
+}
+.mobile-image {
+  width: 100%;
+  margin-bottom: 1rem;
+  object-fit: contain;
+  border-radius: 0.7rem 0.7rem 0 0;
+}
+section {
+  border-radius: 0.7rem;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.non-img {
+  margin: 1.5rem 1.5rem;
+}
+.non-img > :not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+button {
+  background-color: var(--dark-cyan);
+  color: var(--white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-height: 3rem;
+  border: none;
+  border-radius: 0.5rem;
+  transition: 0.3 ease;
+}
+button:hover {
+  cursor: pointer;
+  background-color: hsl(158, 37%, 21%);
+}
+i {
+  font-size: 1.5rem;
+  padding: 1rem 0 1rem 0;
+  margin-right: 1rem;
+}
+
+.discount {
+  text-decoration: line-through;
+}
+
+/* responsiveness  */
+@media (min-width: 650px) {
+  html {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .desktop-image {
+    display: block;
+    max-width: 300px;
+    border-radius: 0.7rem 0 0 0.7rem;
+    object-fit: cover;
+  }
+  .mobile-image {
+    display: none;
+  }
+  section {
+    max-width: 600px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .non-img {
+    margin: 2.2rem;
+  }
+  .price {
+    margin-top: 3rem;
+  }
+}
